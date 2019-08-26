@@ -1,0 +1,94 @@
+class:
+->a class is a user defined data type.
+->Why do we create our own data type?
+	->we create our own data type to represent a real-world entity in the program.
+	->real-world entities have 2 types of members / properties:
+		->data members
+		->member methods.
+
+		
+			facebookuser
+			------------------
+	______________________|____________________
+	|					|
+	Data Members				Member Methods
+	-----------------				----------------------
+	name					post()
+	mobile					addstories()
+	dob					chat()
+	gender					searchprofile()
+	password					changeaccountsetting()
+	email					viewposts()
+	schoolname				tag()
+	collegename				follow()
+	employername				sendfriendrequests()
+	...					...
+
+
+	->a class acts as a container that allows us to encapsulate / define all the members / properties of a real world entity under a single name.
+	->We use classes to implement reusability of code... ???
+	->we use classes to implement data security... ???
+
+	->Classes have two syntaxes:
+		->class definition
+		->object declaration
+
+----------------------------------------------------------------------------------
+Student	(class)
+	data members:
+		roll
+		name
+		m1
+		m2
+		per
+	member methods:
+		set()
+		calculate()
+		show()	
+----------------------------------------------------------------------------------
+class definition syntax:
+----------------------------
+class ClassName
+{
+	access_specifier data_member declaration;
+	access_specifier member method definition()
+	{
+		---
+	}	
+}
+-------------------------------------------------------------------------------------
+access_specifiers:	private, protected, public, default (by default)
+
+private members of a class cannot be accessed from outside the class definition. we can only access the private members from within the class using member methods.
+
+public members of a class can be accessed from outside as well as from inside the class definition.
+-------------------------------------------------------------------------------------
+
+Rules:
+->we can initialize a data member at the time of class definition.
+->from inside a member method definition, we can access all the other members of the class without using the object name or the . operator
+->No memory allocation occurs for the members of the class at the time of class definition.
+->memory allocation only occurs when we declar an object of that class
+->object is a sequential memory allocation that is capable of storing multiple constants of different data types under the same name.
+
+Object Declaration Syntax :
+----------------------------------
+ClassName objectname = new ClassName();
+
+
+we can only access the public members of the class using the object:
+objectname.member
+
+----------------------------------------------------------------------------------------
+Constuctors:
+->constuctor is a spl. member method.
+->why spl.?
+	->name of the constructor = name of the class
+	->we cannot return from a constructor. no return data type. not even void.
+	->types of constructors:
+		->default constructor		(takes no arguments)
+		->parameterized constructor		(takes arguments)
+	->the constructor has to be public only.
+	->we cannot explicitly call a constructor like a regular member method.
+	->a constructor gets auto called when we declare an object of the class.
+----------------------------------------------------------------------------------------------------

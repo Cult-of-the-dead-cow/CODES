@@ -1,0 +1,71 @@
+java.lang.ArithmeticException: / by zero
+java.util.InputMismatchException
+java.lang.ArrayIndexOutOfBoundsException
+
+
+Errors:
+->Compile Time Errors
+	->are detected at compile time
+	->are syntaxical errors
+	->if our code has CTE, we cannot run the code
+	
+->Run Time Errors / Exceptions
+	->are detected at run time
+	->are logical errors / system flaws
+	->if our code has Exceptions, we can still run the code
+	->at run time, when an exception is detected, the code crashes.
+	->crash: untimely application exit.
+
+Exception Handling:
+->here, we detect run time errors in our code and prevent crashes.
+
+->in java, we have 100s of built in exceptions
+->all predefined exceptions are predefined classes.
+->most of the predefined exceptions are located in the package: "java.lang". spl. package, we do not need to import this package.
+->in java, we can even create our own custom / user defined exceptions
+->we can display the name of the exception along with the default exception error message by printing the exception object
+
+Exception Handling Syntax:
+--------------------------------
+try
+{
+	---
+	error prone statements
+	statements dependent on the error prone statements
+	---	
+}
+catch(ExceptionClassName object)
+{
+	---
+	take corrective action
+	---
+}
+catch(ExceptionClassName object)
+{
+	---
+	take corrective action
+	---
+}
+catch(Exception ex)
+{
+	//optional block
+	//generic catch block
+	//can catch any exception
+}
+finally
+{
+	//optional block
+	//this block gets executed when there is no exception in the try block
+	//this block gets executed when there is an exception in the try block
+	//usually, we write the closure code here
+}
+-----------------------------------
+
+
+Rules:
+->try and catch are keywords
+->catch block cannot exist without try block.
+->one catch block only represents an exception.
+->one try block can have multiple catch blocks
+->when exception is detected in th try block, the control is sent straight to it's corresponding catch block.
+->catch block is not executed if exception is not detected in the try block.

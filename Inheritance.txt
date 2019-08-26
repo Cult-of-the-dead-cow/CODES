@@ -1,0 +1,146 @@
+Inheritance:
+------------
+->inheritance is creating a new class while deriving properties (data members or member methods) 
+from a previously created class.
+
+A       super class
+|
+B       sub class
+
+->Why do we do inheritance?
+    ->we use inheritance to implement reusability of code.
+    ->code size / time / effort / complexity reduction takes place.
+
+->Types of Inheritances:
+    ->SIngle Level
+        A
+        |
+        B
+
+    ->MultiLevel Inheritance    
+        A
+        |
+        B
+        |
+        C
+        |
+        D
+
+    ->Hierarchical Inheritance
+                A
+        ________|________
+        |               |
+        B               C
+
+    ->Multiple Inheritance (Not supported in Java)
+
+    A                   B
+    |___________________|
+            |
+            C
+
+    Note: we cannot inherit from multiple super classes.
+
+Single Level Inheritance Syntax:
+
+A
+|
+B
+
+class A
+{}
+
+class B extends A
+{}
+
+Note:
+1. all the super class public members will become accessible in the sub class member methods
+2. all the super class private members will become inaccessible in the sub class member methods
+
+-------------------------------------------------------------
+
+MultiLevel Inheritance    
+        A
+        |
+        B
+        |
+        C
+
+class A
+{}
+
+class B extends A
+{}
+
+class C extends B
+{}
+
+-----------------------------------------------------------
+
+Hierarchical Inheritance
+                A
+        ________|________
+        |               |
+        B               C
+
+class A
+{}
+
+class B extends A
+{}
+
+class C extends A
+{}
+
+--------------------------------------------------------------
+
+Cone                        Cylinder
+----                        --------
+r                           r
+h                           h
+vol                         vol
+set(a,b)                    set(r,h)
+calculateVol()              calculateVol()
+showVol()                   showVol()
+-----------                 ---------------
+
+--------------------------------------------------------------
+
+                        Shape
+                        -----
+                        r
+                        h
+                        vol
+                        set(r,h)
+                        showVol()
+                        ---------
+    ______________________|_________________________
+    |                                               |
+    Cone                                            Cylinder
+    -----                                           --------
+    calculateVol()                                  calculateVol()
+    ---------------                                 ---------------
+
+    Abstract methods and abstract class:
+    -------------------------------------
+    making a method in the super MUST DEFINABLE in the sub class.
+    
+    Abstract method:
+    ---------------
+    ->there are situations where a super class needs to ensure that all it's sub classes MUST DEFINE / MUST OVERRIDE SOME FUNCTIONALITY AND ON FAILING OF WHICH THE COMPLIER SHOULD GIVEN ERROR 
+    ->this rule can be establish by using abstract methods 
+    ->abstract method is a special super class method 
+    ->in the super class we only have the abstract method class declaration we donot have the abstract class method in the super class 
+    ->this abstract method declaration in the super class must be public in nature 
+    .this abstract method declaration must be prefixed with the abstract keyword  
+    ->when a super class has an abstract method all its sub classes must:
+        ->define the abstract method
+        ->must define with the same signature
+        ->must be public only.
+    ->if any sub class does not abide by these rules, we get an error.
+
+    Abstract Class:
+    -------------
+    ->if a class contains an abstract method it is an abstract class.
+    ->such a class cannot be instantiated / we cannot declare an object of abstract class using the new keyword
+    ->the abstract class definition must be prefixed with the "abstract" keyword.

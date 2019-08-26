@@ -1,0 +1,69 @@
+C:\Program Files\Java\jdk-11.0.1
+
+C:\Program Files\Java\jdk-11.0.1\bin
+
+bin folder:
+->spl. folder
+->contains the the java compiler (javac.exe) and the java executer (java.exe)
+
+JVM:
+->Java Virtual Machine
+->when we run a java application in the JRE, the JRE wakes up a pseudo / fake machine called the JVM, on which the application runs.
+
+
+
+Structure of a Java Program:
+---------------------------------
+class MainClassName
+{
+	public static void main(String args[])
+	{
+		----
+		----
+	}
+}
+------------------------------------------------------------------
+->Java is a Pure Object Oriented Programming Language. ie every program requires a class definition.
+->in java, we can define multiple classes but we have to define a spl. class called the main class -> contains main()
+->main() is the entry point of the program.
+->main() is a member function / method of the main class.
+->main() takes an argument -> String array -> for command line aguments ???
+->to display some message on the screen:
+	System.out.print("Message");
+	System.out.println("Message");
+
+---------------------------------------------------------------------------
+Steps to write an save a java based program:
+-------------------------------------------------------
+->save the file:
+	->as a .java file
+	->with the same name as the Main class name (not a rule)
+
+
+Steps to compile a java program:
+---------------------------------------
+->open command line
+->reach the location of the source code file
+->compile using the following syntax:
+	javac SourceCodeFileName.java
+
+Note: on successful compilation the bytecode file is created with the same name as the main classname
+
+Source Code File Name:	Print.java		(we compile this file)
+Main Class Name:		Print
+ByteCode file name:		Print.class		(we run this file)
+
+Steps to execute a java based program:
+-----------------------------------------------
+
+->open command line
+->reach the location of the byte code file
+->run using the following syntax:
+	java ByteCodeFileName
+
+------------------------------------------------------------
+
+Source Code File Name:	Print2.java		(we compile this file)
+Main Class Name:		MyMainProgram2 , MyMainProgram3
+ByteCode file name:		MyMainProgram2.class , MyMainProgram3.class		(we run this file)
+--------------------------------------------------------------------------------------------------------
